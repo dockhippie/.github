@@ -1,0 +1,7 @@
+# Status
+
+| Repo | Docker
+| --- | --- |
+<%- @repos.each do |row| -%>
+| [<%= row %>](https://github.com/dockhippie/<%= row %>) | [![Docker Build](https://github.com/dockhippie/<%= row %>/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/<%= row %>/actions/workflows/docker.yml) |
+<%- end -%>
