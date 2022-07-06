@@ -46,6 +46,7 @@
 | [solder](https://github.com/dockhippie/solder) | [![Docker Build](https://github.com/dockhippie/solder/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/solder/actions/workflows/docker.yml) |
 | [steamcmd](https://github.com/dockhippie/steamcmd) | [![Docker Build](https://github.com/dockhippie/steamcmd/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/steamcmd/actions/workflows/docker.yml) |
 | [tcpproxy](https://github.com/dockhippie/tcpproxy) | [![Docker Build](https://github.com/dockhippie/tcpproxy/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/tcpproxy/actions/workflows/docker.yml) |
+| [temurin](https://github.com/dockhippie/temurin) | [![Docker Build](https://github.com/dockhippie/temurin/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/temurin/actions/workflows/docker.yml) |
 | [traefik](https://github.com/dockhippie/traefik) | [![Docker Build](https://github.com/dockhippie/traefik/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/traefik/actions/workflows/docker.yml) |
 | [ubuntu](https://github.com/dockhippie/ubuntu) | [![Docker Build](https://github.com/dockhippie/ubuntu/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/ubuntu/actions/workflows/docker.yml) |
 | [unifi](https://github.com/dockhippie/unifi) | [![Docker Build](https://github.com/dockhippie/unifi/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/unifi/actions/workflows/docker.yml) |
