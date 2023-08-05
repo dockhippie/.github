@@ -2,6 +2,7 @@
 name: status
 
 "on":
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -15,12 +16,16 @@ jobs:
     steps:
       - name: Checkout source
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.BOT_ACCESS_TOKEN }}
 
       - name: Setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
           bundler-cache: true
+
+      - name: Write date
+        run: date >| .github/STATUS
 
       - name: Execute script
         env:
@@ -32,8 +37,8 @@ jobs:
         with:
           author_name: GitHub Actions
           author_email: github@webhippie.de
-          add: STATUS.md
-          message: automated status update [skip ci]
+          add: STATUS.md .github/STATUS
+          message: "docs: automated status update [skip ci]"
           push: true
           commit: --signoff
 

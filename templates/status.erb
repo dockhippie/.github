@@ -1,7 +1,7 @@
 # Status
+<%- @repos.each do |r| -%><%- unless r[:workflows].empty? -%>
 
-| Repo | Docker
-| --- | --- |
-<%- @repos.each do |row| -%>
-| [<%= row %>](https://github.com/dockhippie/<%= row %>) | [![Docker Build](https://github.com/dockhippie/<%= row %>/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/<%= row %>/actions/workflows/docker.yml) |
-<%- end -%>
+## <%= r[:name] %>
+<%- r[:workflows].each do |w| -%>[![<%= w %> build](https://github.com/crafthippie/<%= r[:name] %>/actions/workflows/<%= w %>.yml/badge.svg)](https://github.com/crafthippie/<%= r[:name] %>/actions/workflows/<%= w %>.yml)<%= " " unless r[:workflows].last == w %><%- end -%>
+
+<%- end -%><%- end -%>

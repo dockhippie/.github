@@ -9,9 +9,22 @@ end
 Octokit::Client.new(
   access_token: ENV["GITHUB_TOKEN"]
 ).tap do |client|
-  @repos = client.org_repos("dockhippie").map(&:name).sort.reject do |row|
-    [".github"].include? row
-  end
+  @repos = client.org_repos("dockhippie").sort_by(&:name).reject do |row|
+    [".github"].include? row.name
+  end.map do |row|
+    begin
+      workflows = client.contents(row.full_name, path: '.github/workflows', query: { ref: 'master' }).map do |w|
+        w.name.delete_suffix(".yml")
+      end
+
+      {
+        name: row.name,
+        workflows: workflows
+      }
+    rescue
+      nil
+    end
+  end.compact
 
   File.write(
     File.expand_path(
@@ -25,8 +38,7 @@ Octokit::Client.new(
            __FILE__
         )
       ),
-      nil,
-      "-"
+      trim_mode: "-"
     ).result
   )
 end

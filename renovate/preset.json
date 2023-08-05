@@ -1,0 +1,87 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": [
+        "Preset used by Dockhippie"
+    ],
+    "extends": [
+        "config:base",
+        "docker:pinDigests",
+        ":semanticCommits",
+        ":semanticCommitType(deps)"
+    ],
+    "docker": {
+        "digest": {
+            "groupName": "docker digests",
+            "automerge": true
+        }
+    },
+    "packageRules": [
+        {
+            "description": "Build tool version upgrades",
+            "groupName": "build tools",
+            "matchManagers": [
+                "github-actions"
+            ],
+            "semanticCommitType": "ci",
+            "semanticCommitScope": "tools",
+            "automerge": true
+        },
+        {
+            "description": "Strip v prefix from versions",
+            "groupName": "version prefix",
+            "matchDatasources": [
+                "github-releases"
+            ],
+            "extractVersion": "^v(?<version>.*)$"
+        },
+        {
+            "description": "Semantic commits for major updates",
+            "groupName": "major versions",
+            "matchUpdateTypes": [
+                "major"
+            ],
+            "semanticCommitType": "major",
+            "semanticCommitScope": "deps",
+            "automerge": true
+        },
+        {
+            "description": "Semantic commits for minor updates",
+            "groupName": "minor versions",
+            "matchUpdateTypes": [
+                "minor"
+            ],
+            "semanticCommitType": "minor",
+            "semanticCommitScope": "deps",
+            "automerge": true
+        },
+        {
+            "description": "Semantic commits for patch updates",
+            "groupName": "patch versions",
+            "matchUpdateTypes": [
+                "patch"
+            ],
+            "semanticCommitType": "patch",
+            "semanticCommitScope": "deps",
+            "automerge": true
+        },
+        {
+            "description": "Automerge docker version updates",
+            "groupName": "docker versions",
+            "matchDatasources": [
+                "docker"
+            ],
+            "matchUpdateTypes": [
+                "patch"
+            ],
+            "semanticCommitType": "minor",
+            "semanticCommitScope": "deps",
+            "automerge": true
+        }
+    ],
+    "labels": [
+        "renovate"
+    ],
+    "ignorePaths": [
+        "archive/"
+    ]
+}
