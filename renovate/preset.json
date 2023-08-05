@@ -5,7 +5,6 @@
     ],
     "extends": [
         "config:base",
-        "docker:pinDigests",
         ":semanticCommits",
         ":semanticCommitType(deps)"
     ],
@@ -20,18 +19,12 @@
             ]
         }
     ],
-    "docker": {
-        "digest": {
-            "groupName": "docker digests",
-            "automerge": true
-        }
-    },
     "packageRules": [
         {
             "description": "Build tool version upgrades",
             "groupName": "build tools",
-            "matchManagers": [
-                "github-actions"
+            "fileMatch": [
+                "^.github/(?:workflows|actions)/.+\\.ya?ml$"
             ],
             "semanticCommitType": "ci",
             "semanticCommitScope": "tools",
@@ -86,6 +79,22 @@
             ],
             "semanticCommitType": "minor",
             "semanticCommitScope": "deps",
+            "automerge": true
+        },
+        {
+            "description": "Automerge docker digest updates",
+            "groupName": "docker digests",
+            "matchDatasources": [
+                "docker"
+            ],
+            "matchUpdateTypes": [
+                "pin",
+                "pinDigest",
+                "digest"
+            ],
+            "semanticCommitType": "chore",
+            "semanticCommitScope": "deps",
+            "pinDigests": true,
             "automerge": true
         }
     ],
