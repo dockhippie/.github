@@ -10,20 +10,18 @@ Octokit::Client.new(
   access_token: ENV["GITHUB_TOKEN"]
 ).tap do |client|
   @repos = client.org_repos("dockhippie").sort_by(&:name).reject do |row|
-    [".github"].include? row.name
+    [".github"].include? row.name or row.archived?
   end.map do |row|
-    begin
-      workflows = client.contents(row.full_name, path: '.github/workflows', query: { ref: 'master' }).map do |w|
-        w.name.delete_suffix(".yml")
-      end
-
-      {
-        name: row.name,
-        workflows: workflows
-      }
-    rescue
-      nil
+    workflows = client.contents(row.full_name, path: '.github/workflows', query: { ref: 'master' }).map do |w|
+      w.name.delete_suffix(".yml")
     end
+
+    {
+      name: row.name,
+      workflows: workflows
+    }
+  rescue StandardError
+    nil
   end.compact
 
   File.write(
