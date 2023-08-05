@@ -21,16 +21,6 @@
     ],
     "packageRules": [
         {
-            "description": "Build tool version upgrades",
-            "groupName": "build tools",
-            "fileMatch": [
-                "^.github/(?:workflows|actions)/.+\\.ya?ml$"
-            ],
-            "semanticCommitType": "ci",
-            "semanticCommitScope": "tools",
-            "automerge": true
-        },
-        {
             "description": "Strip v prefix from versions",
             "groupName": "version prefix",
             "matchDatasources": [
@@ -95,6 +85,16 @@
             "semanticCommitType": "chore",
             "semanticCommitScope": "deps",
             "pinDigests": true,
+            "automerge": true
+        },
+        {
+            "description": "Build tool version upgrades",
+            "groupName": "build tools",
+            "fileMatch": [
+                "^.github/(?:workflows|actions)/.+\\.ya?ml$"
+            ],
+            "semanticCommitType": "ci",
+            "semanticCommitScope": "tools",
             "automerge": true
         }
     ],
