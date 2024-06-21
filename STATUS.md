@@ -61,7 +61,7 @@
 [![docker build](https://github.com/dockhippie/mongodb/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/mongodb/actions/workflows/docker.yml) [![readme build](https://github.com/dockhippie/mongodb/actions/workflows/readme.yml/badge.svg)](https://github.com/dockhippie/mongodb/actions/workflows/readme.yml) [![v4.0 build](https://github.com/dockhippie/mongodb/actions/workflows/v4.0.yml/badge.svg)](https://github.com/dockhippie/mongodb/actions/workflows/v4.0.yml) [![v4.2 build](https://github.com/dockhippie/mongodb/actions/workflows/v4.2.yml/badge.svg)](https://github.com/dockhippie/mongodb/actions/workflows/v4.2.yml) [![v4.4 build](https://github.com/dockhippie/mongodb/actions/workflows/v4.4.yml/badge.svg)](https://github.com/dockhippie/mongodb/actions/workflows/v4.4.yml) [![v5.0 build](https://github.com/dockhippie/mongodb/actions/workflows/v5.0.yml/badge.svg)](https://github.com/dockhippie/mongodb/actions/workflows/v5.0.yml) [![v6.0 build](https://github.com/dockhippie/mongodb/actions/workflows/v6.0.yml/badge.svg)](https://github.com/dockhippie/mongodb/actions/workflows/v6.0.yml)
 
 ## mywebsql
-[![docker build](https://github.com/dockhippie/mywebsql/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/mywebsql/actions/workflows/docker.yml) [![readme build](https://github.com/dockhippie/mywebsql/actions/workflows/readme.yml/badge.svg)](https://github.com/dockhippie/mywebsql/actions/workflows/readme.yml)
+[![docker build](https://github.com/dockhippie/mywebsql/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/mywebsql/actions/workflows/docker.yml) [![readme build](https://github.com/dockhippie/mywebsql/actions/workflows/readme.yml/badge.svg)](https://github.com/dockhippie/mywebsql/actions/workflows/readme.yml) [![v3.9 build](https://github.com/dockhippie/mywebsql/actions/workflows/v3.9.yml/badge.svg)](https://github.com/dockhippie/mywebsql/actions/workflows/v3.9.yml)
 
 ## nginx
 [![docker build](https://github.com/dockhippie/nginx/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/nginx/actions/workflows/docker.yml) [![readme build](https://github.com/dockhippie/nginx/actions/workflows/readme.yml/badge.svg)](https://github.com/dockhippie/nginx/actions/workflows/readme.yml)
@@ -113,9 +113,6 @@
 
 ## sentry
 [![docker build](https://github.com/dockhippie/sentry/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/sentry/actions/workflows/docker.yml) [![readme build](https://github.com/dockhippie/sentry/actions/workflows/readme.yml/badge.svg)](https://github.com/dockhippie/sentry/actions/workflows/readme.yml)
-
-## skydns
-[![docker build](https://github.com/dockhippie/skydns/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/skydns/actions/workflows/docker.yml) [![readme build](https://github.com/dockhippie/skydns/actions/workflows/readme.yml/badge.svg)](https://github.com/dockhippie/skydns/actions/workflows/readme.yml)
 
 ## solder
 [![docker build](https://github.com/dockhippie/solder/actions/workflows/docker.yml/badge.svg)](https://github.com/dockhippie/solder/actions/workflows/docker.yml) [![readme build](https://github.com/dockhippie/solder/actions/workflows/readme.yml/badge.svg)](https://github.com/dockhippie/solder/actions/workflows/readme.yml) [![v0.7 build](https://github.com/dockhippie/solder/actions/workflows/v0.7.yml/badge.svg)](https://github.com/dockhippie/solder/actions/workflows/v0.7.yml)
