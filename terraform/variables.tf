@@ -12,6 +12,10 @@ variable "members" {
       name = "tboerger"
       role = "admin"
     },
+    {
+      name = "felixboehm"
+      role = "admin"
+    },
   ]
 }
 
@@ -29,6 +33,10 @@ variable "teams" {
         {
           name = "tboerger"
           role = "maintainer"
+        },
+        {
+         name = "felixboehm"
+         role = "maintainer"
         },
       ]
     },
@@ -51,6 +59,10 @@ variable "teams" {
         {
           name = "tboerger"
           role = "maintainer"
+        },
+        {
+         name = "felixboehm"
+         role = "maintainer"
         },
       ]
     },
