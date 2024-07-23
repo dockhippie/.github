@@ -35,8 +35,8 @@ variable "teams" {
           role = "maintainer"
         },
         {
-         name = "felixboehm"
-         role = "maintainer"
+          name = "felixboehm"
+          role = "maintainer"
         },
       ]
     },
@@ -61,8 +61,8 @@ variable "teams" {
           role = "maintainer"
         },
         {
-         name = "felixboehm"
-         role = "maintainer"
+          name = "felixboehm"
+          role = "maintainer"
         },
       ]
     },
