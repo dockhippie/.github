@@ -58,18 +58,6 @@
             "automerge": true
         },
         {
-            "description": "Automerge docker version updates",
-            "matchDatasources": [
-                "docker"
-            ],
-            "matchUpdateTypes": [
-                "patch"
-            ],
-            "semanticCommitType": "deps",
-            "semanticCommitScope": "minor",
-            "automerge": true
-        },
-        {
             "description": "Automerge docker digest updates",
             "matchDatasources": [
                 "docker"
