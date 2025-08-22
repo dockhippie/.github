@@ -4,7 +4,10 @@
         "Preset used by Dockhippie"
     ],
     "extends": [
-        "config:base",
+        "config:best-practices",
+        ":automergeDigest",
+        ":disableRateLimiting",
+        ":prImmediately",
         ":semanticCommits",
         ":semanticCommitType(deps)"
     ],
@@ -22,7 +25,6 @@
     "packageRules": [
         {
             "description": "Strip v prefix from versions",
-            "groupName": "version prefix",
             "matchDatasources": [
                 "github-releases"
             ],
@@ -30,50 +32,45 @@
         },
         {
             "description": "Semantic commits for major updates",
-            "groupName": "major versions",
             "matchUpdateTypes": [
                 "major"
             ],
-            "semanticCommitType": "major",
-            "semanticCommitScope": "deps",
+            "semanticCommitType": "deps",
+            "semanticCommitScope": "major",
             "automerge": true
         },
         {
             "description": "Semantic commits for minor updates",
-            "groupName": "minor versions",
             "matchUpdateTypes": [
                 "minor"
             ],
-            "semanticCommitType": "minor",
-            "semanticCommitScope": "deps",
+            "semanticCommitType": "deps",
+            "semanticCommitScope": "minor",
             "automerge": true
         },
         {
             "description": "Semantic commits for patch updates",
-            "groupName": "patch versions",
             "matchUpdateTypes": [
                 "patch"
             ],
-            "semanticCommitType": "patch",
-            "semanticCommitScope": "deps",
+            "semanticCommitType": "deps",
+            "semanticCommitScope": "patch",
             "automerge": true
         },
         {
             "description": "Automerge docker version updates",
-            "groupName": "docker versions",
             "matchDatasources": [
                 "docker"
             ],
             "matchUpdateTypes": [
                 "patch"
             ],
-            "semanticCommitType": "minor",
-            "semanticCommitScope": "deps",
+            "semanticCommitType": "deps",
+            "semanticCommitScope": "minor",
             "automerge": true
         },
         {
             "description": "Automerge docker digest updates",
-            "groupName": "docker digests",
             "matchDatasources": [
                 "docker"
             ],
@@ -82,14 +79,13 @@
                 "pinDigest",
                 "digest"
             ],
-            "semanticCommitType": "chore",
-            "semanticCommitScope": "deps",
+            "semanticCommitType": "deps",
+            "semanticCommitScope": "patch",
             "pinDigests": true,
             "automerge": true
         },
         {
             "description": "Build tool version upgrades",
-            "groupName": "build tools",
             "matchManagers": [
                 "github-actions"
             ],
