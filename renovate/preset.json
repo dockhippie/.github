@@ -32,7 +32,7 @@
         },
         {
             "description": "Semantic commits for major updates",
-            "group": "major",
+            "groupName": "major",
             "matchUpdateTypes": [
                 "major"
             ],
@@ -42,7 +42,7 @@
         },
         {
             "description": "Semantic commits for minor updates",
-            "group": "minor",
+            "groupName": "minor",
             "matchUpdateTypes": [
                 "minor"
             ],
@@ -52,7 +52,7 @@
         },
         {
             "description": "Semantic commits for patch updates",
-            "group": "patch",
+            "groupName": "patch",
             "matchUpdateTypes": [
                 "patch"
             ],
@@ -62,7 +62,7 @@
         },
         {
             "description": "Automerge docker digest updates",
-            "group": "digest",
+            "groupName": "digest",
             "matchDatasources": [
                 "docker"
             ],
