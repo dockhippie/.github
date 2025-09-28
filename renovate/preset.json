@@ -5,12 +5,14 @@
     ],
     "extends": [
         "config:best-practices",
-        ":automergeDigest",
         ":disableRateLimiting",
         ":prImmediately",
         ":semanticCommits",
         ":semanticCommitType(deps)"
     ],
+    "dockerfile": {
+        "pinDigests": true
+    },
     "regexManagers": [
         {
             "fileMatch": [
@@ -32,7 +34,6 @@
         },
         {
             "description": "Semantic commits for major updates",
-            "groupName": "major",
             "matchUpdateTypes": [
                 "major"
             ],
@@ -42,7 +43,6 @@
         },
         {
             "description": "Semantic commits for minor updates",
-            "groupName": "minor",
             "matchUpdateTypes": [
                 "minor"
             ],
@@ -52,7 +52,6 @@
         },
         {
             "description": "Semantic commits for patch updates",
-            "groupName": "patch",
             "matchUpdateTypes": [
                 "patch"
             ],
@@ -62,7 +61,7 @@
         },
         {
             "description": "Automerge docker digest updates",
-            "groupName": "digest",
+            "groupName": "docker digests",
             "matchDatasources": [
                 "docker"
             ],
@@ -78,6 +77,7 @@
         },
         {
             "description": "Build tool version upgrades",
+            "groupName": "build tools",
             "matchManagers": [
                 "github-actions"
             ],
