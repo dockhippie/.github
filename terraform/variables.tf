@@ -1,8 +1,9 @@
-variable "organization" {
-  default = "dockhippie"
-}
-
 variable "members" {
+  description = "List of GitHub organization members"
+  type = list(object({
+    name = string
+    role = string
+  }))
   default = [
     {
       name = "bothippie"
@@ -20,6 +21,16 @@ variable "members" {
 }
 
 variable "teams" {
+  description = "List of GitHub teams with members"
+  type = list(object({
+    name       = string
+    privacy    = string
+    permission = string
+    members = list(object({
+      name = string
+      role = string
+    }))
+  }))
   default = [
     {
       name       = "admins"
